@@ -1,30 +1,30 @@
 package com.skillnext2;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "student")
 public class Student {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String name;
     private String email;
     private double marks;
 
-    public Student() {}
+    // Default constructor
+    public Student() {
+    }
 
+    // Parameterized constructor
     public Student(String name, String email, double marks) {
         this.name = name;
         this.email = email;
         this.marks = marks;
     }
 
-    // getters & setters
+    // Getters and setters
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

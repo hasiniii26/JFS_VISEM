@@ -5,15 +5,15 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
 
-    private static SessionFactory factory;
+    private static SessionFactory sessionFactory;
 
     static {
-        factory = new Configuration()
+        sessionFactory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .buildSessionFactory();
     }
 
     public static SessionFactory getSessionFactory() {
-        return factory;
+        return sessionFactory;
     }
 }
